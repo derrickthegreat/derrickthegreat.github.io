@@ -130,16 +130,19 @@ p {
     transition: 0.3s;
 }
 
-.project:hover>a {
+.project-description>a, .project:hover>a {
     color: black;
 }
 
 .project>h2 {
     color: white;
 }
+.project-description {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
 
 aside {
-    border-top: 1px rgb(0,0,0,0.5) solid;
+    background-color: rgba(0,0,0, 0.1);
     padding: 1rem;
     font-weight: bold;
     font-family: monospace;
@@ -147,7 +150,7 @@ aside {
 }
 
 aside>a {
-    color: rgb(0, 0, 0, 0.7);
+    color: rgb(0, 0, 0);
 }
 
 aside>a:hover {
