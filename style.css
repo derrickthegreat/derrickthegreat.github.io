@@ -104,18 +104,19 @@ p {
 }
 
 .portfolio {
-    margin: 2rem;
+    margin-top: 1rem;
     text-align: center;
 }
 .portfolio-container {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 1rem;
+    margin-top: 1rem;
 }
 
 .project {
-    display: inline-block;
+    display: grid;
+    grid-template-rows: 1fr;
     margin: 0.5rem;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
     background-color: rgba(255, 255, 255, 0.5);
