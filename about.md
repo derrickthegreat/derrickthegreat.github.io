@@ -1,3 +1,3 @@
 ## Welcome to my Page!
 
-Feel free to browse my amazing projects.
+Still figuring out how to use Jekyll
