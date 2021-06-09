@@ -79,7 +79,7 @@ main {
 .me-name {
     font-size: 3rem;
     font-family: 'Major Mono Display', monospace;
-    letter-spacing: 5px;
+    letter-spacing: 0.5ch;
     margin-bottom: 1rem;
 }
 
@@ -168,6 +168,7 @@ footer {
 
 strong {
     margin: 5px;
+    letter-spacing: 0.1ch;
 }
 
 .social {
