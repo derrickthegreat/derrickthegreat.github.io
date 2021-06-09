@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: inherit;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background: linear-gradient(140deg, rgb(111, 226, 235), rgba(224, 142, 142));
+    background-size: 200% 200%;
+    min-height: 100vh;
+    animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+a {
+    color: rgb(0,0,0);
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+
+nav ul li>a {
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+nav ul li>a:hover {
+    color: rgba(224, 142, 142);
+    border-bottom: 4px solid rgba(224, 142, 142);
+}
+
+main {
+    margin: 2rem;
+}
+
+.title {
+    margin: 1rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+}
+
+.me-name {
+    font-size: 3rem;
+    letter-spacing: 5px;
+
+}
+
+
+h1, h2, h3, h4 {
+    text-transform: lowercase;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+.portfolio {
+    margin: 2rem;
+    text-align: center;
+}
+.portfolio-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px rgba(0, 0, 0, 0.247) solid;
+    transition: 0.3s;
+}   
+
+.project:hover {
+    box-shadow: rgb(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+}
+.project:hover>a {
+    color: black;
+}
+.project>h2 {
+    color: white;
+}
+footer {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+
+}
+footer>a {
+    color: white;
+}
