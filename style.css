@@ -74,28 +74,33 @@ main {
     margin: 1rem;
     padding-bottom: 3rem;
     text-align: center;
-
 }
 
 .me-name {
     font-size: 3rem;
     letter-spacing: 5px;
-
 }
 
+.avatar {
+    border-radius: 50%;
+    max-height: 5rem;
+}
 
 h1, h2, h3, h4 {
     text-transform: lowercase;
-    padding: 1rem;
 }
 
 h1 {
     font-size: 2rem;
-    margin: 1rem;
+    padding: 1rem
+}
+
+h2 {
+    padding: 1rem
 }
 
 p {
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .portfolio {
@@ -106,15 +111,15 @@ p {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
 }
 
 .project {
     display: inline-block;
     margin: 0.5rem;
-    padding: 1rem;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px rgba(0, 0, 0, 0.247) solid;
+    border: 1px rgba(0, 0, 0, 0.25) solid;
     transition: 0.3s;
 }   
 
@@ -123,18 +128,43 @@ p {
     background-color: rgba(255, 255, 255, 0.9);
     transition: 0.3s;
 }
+
 .project:hover>a {
     color: black;
 }
+
 .project>h2 {
     color: white;
 }
+
+aside {
+    border-top: 1px rgb(0,0,0,0.5) solid;
+    padding: 1rem;
+    font-weight: bold;
+    font-family: monospace;
+    text-transform: lowercase;
+}
+
+aside>a {
+    color: rgb(0, 0, 0, 0.7);
+}
+
+aside>a:hover {
+    color: rgb(224, 142, 142);
+}
+
 footer {
     text-align: center;
-    margin: 2rem;
-    font-size: 1.5rem;
-
+    font-size: 1rem;
+    text-transform: lowercase;
 }
+
 footer>a {
     color: white;
+}
+
+.social {
+    padding: 5px;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
 }
