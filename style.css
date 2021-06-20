@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto:wght@100;300;400;700&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+/*
+#Site Colors:
+- Baby Blue - rgb(111, 226, 235);
+- Pink - rgb(224, 142, 142);
+
+#Fonts
+- Major Mono - 400
+- Roboto - 100 / 300 / 400 / 700
+
+*/
+
+/* Universal Styles */
 
 html {
     box-sizing: border-box;
@@ -16,10 +29,13 @@ html {
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr 1fr auto;
     background: linear-gradient(140deg, rgb(111, 226, 235), rgba(224, 142, 142));
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
+    text-align: center;
+    justify-content: center;
+    align-content: space-between;
 }
 
 @keyframes Gradient {
@@ -42,18 +58,27 @@ a:hover {
     color: rgba(224, 142, 142);
 }
 
-nav {
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
 }
 
+h2 {
+    font-size: 1em;
+    padding: 1em 0;
+}
+
+/* Navigation */
+
+nav {
+    grid-area: 1 / 1 / span 1 / span 1;
+    padding: 1rem;
+}
 
 nav ul li {
     display: inline-block;
-    margin: 10px;
+    margin: 12px;
 }
-
 
 nav ul li>a {
     padding: 0.5rem;
@@ -64,61 +89,38 @@ nav ul li>a:hover {
     border-bottom: 4px solid rgba(224, 142, 142);
 }
 
-main {
-    margin: 2rem;
-}
+/* Header */
 
-.title {
-    margin: 1rem;
-    padding-bottom: 3rem;
-    text-align: center;
-}
-
-.me-name {
-    font-size: 2.5rem;
-    font-family: 'Major Mono Display', monospace;
-    letter-spacing: 0.25ch;
-    margin-bottom: 1rem;
+.header {
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50vh;
 }
 
 .avatar {
     border-radius: 50%;
     max-height: 6rem;
-    margin: 1rem 0;
+    margin: 2em 0;
 }
 
-h1, h2, h3, h4 {
-    text-transform: lowercase;
+.header p {
+    padding: 0.7em;
 }
 
-h1 {
-    font-size: 2rem;
-    padding: 1rem
-}
-
-h2 {
-    padding: 1rem
-}
-
-p {
-    padding: 1rem;
-}
+/* Main Section */
 
 .portfolio {
-    margin-top: 1rem;
-    text-align: center;
-}
-.portfolio-container {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin-top: 1rem;
+    grid-area: 3 / 1 / span 1 / span 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
+
 .project {
-    display: grid;
-    grid-template-rows: 1fr;
-    margin: 0.5rem;
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px rgba(0, 0, 0, 0.25) solid;
@@ -144,7 +146,6 @@ p {
 
 aside {
     background-color: rgba(0,0,0, 0.1);
-    padding: 1rem;
     font-weight: bold;
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
@@ -158,23 +159,11 @@ aside>a:hover {
     color: rgb(224, 142, 142);
 }
 
-footer {
-    text-align: center;
-    font-size: 1rem;
-    text-transform: lowercase;
-}
 
-strong {
-    margin: 5px;
-    letter-spacing: 0.1ch;
-}
+/* Contact / Footer */
 
-.social {
-    padding: 5px;
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
-}
-
-main {
-    text-align: center;
+footer li {
+    grid-area: 4 / 1 / span 1 / span 1;
+    display: inline-block;
+    margin: 0 1em;
 }
