@@ -9,66 +9,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="top-bar">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Site Nav -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="title" id="home">
+        <h1 class="me-name">Derrick Alvarez</h1>
+        <img src="./img/me.jpg" alt="Derrick Alvarez" class="avatar">
+        <h3>Full-Stack Web Developer</h3>
+        <p>I am an insurance professional that also<br>
+            dabbles in web development.<br>   
+        </p>
+        <strong>Welcome to my Portfolio!</strong>
     </header>
+
+    <!-- Main Section -->
     <main>
-        <section class="title" id="home">
-            <header>
-                <h1 class="me-name">Derrick Alvarez</h1>
-                <img src="./img/me.jpg" alt="portrait of Derrick Alvarez" class="avatar">
-                <h2>Full-Stack Web Developer</h2>
-            </header>
-            <p>I am an insurance professional that also<br>
-            dabbles in web development.<br><br>    
-            </p>
-            <h3>Welcome to my portfolio!</h3>
-        </section>
         <section class="portfolio">
-            <h1>&lt;CodeCademy Projects&gt;</h1>
-            <div class="portfolio-container">
+            <h2>&lt;CodeCademy Projects&gt;</h2>
+
+                <!-- Porfolio Cards -->
                 <article class="project">
                     <div class="project-description">
                         <a href="/">
-                            <h2>My Portfolio</h2>
-                            <p>Portfolio made for one of my code-review assignments. 🤷🏽‍♂️</p>
+                            <h3>My Portfolio</h3>
+                            <p>The page you are currently on :-)</p>
                     </a>
                     </div>
                     <aside>
                         <a href="https://github.com/derrickthegreat/derrickthegreat.github.io" target="_blank">&lt;View-Code&gt;</a>
                     </aside>
                 </article>
+
+                <!-- Porfolio Card -->
                 <article class="project">
                     <div class="project-description">
                         <a href="/fortune-cookie/">
-                            <h2>Fortune Cookie</h2>
+                            <h3>Fortune Cookie</h3>
                             <p>This is the first project I completed from the codecademy course.</p>
                     </a>
                     </div>
                     <aside><a href="https://github.com/derrickthegreat/fortune-cookie" target="_blank">&lt;View-Code&gt;</a></aside>
                 </article>
+
+                <!-- Porfolio Card -->
                 <article class="project">
                     <div class="project-description">
                         <a href="/calculator.js/">
-                            <h2>Calculator.js</h2>
+                            <h3>Calculator.js</h3>
                         <p>This was a personal project I completed tying everything I've learned so far.</p>
                     </a>
                     </div>
                     <aside><a href="https://github.com/derrickthegreat/calculator.js" target="_blank">&lt;View-Code&gt;</a></aside>
                 </article>
-            </div>
         </section>
     </main>
+    
+    <!-- Footer -->
     <footer id="contact">
-        <p>
-           <strong>&lt;!-- contact/social --&gt;</strong><br><a href="https://github.com/derrickthegreat" target="_blank" class="fab fa-github social"></a> <a href="https://www.linkedin.com/in/derrick-alvarez" target="_blank" class="fab fa-linkedin social"></a> <a href="mailto:derrickcanbereached@gmail.com" class="fas fa-at"></a>
-        </p>
+        <h2>&lt;!-- Connect With Me --&gt;</h2>
+        <ul>
+            <li><a href="https://github.com/derrickthegreat" target="_blank" class="fab fa-github social"></a></li>
+            <li><a href="https://www.linkedin.com/in/derrick-alvarez" target="_blank" class="fab fa-linkedin social"></a></li>
+            <li><a href="mailto:derrickcanbereached@gmail.com" class="fas fa-at"></a></li>
+        </ul>
     </footer>
 </body>
 </html>
