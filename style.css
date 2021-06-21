@@ -34,7 +34,9 @@ body {
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     text-align: center;
+    height: 100vh;
 }
+
 main {
     display: grid;
     align-items: space-between;
@@ -67,7 +69,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     font-size: 1em;
-    padding: 1em 0;
 }
 
 /* Navigation */
@@ -79,7 +80,7 @@ nav {
 
 nav ul li {
     display: inline-block;
-    margin: 12px;
+    margin: 8px;
 }
 
 nav ul li>a {
@@ -99,7 +100,11 @@ nav ul li>a:hover {
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.header h1, .header h2, .header strong,.header  p {
+    margin: 0.5em 0;
 }
 
 .avatar {
@@ -108,11 +113,12 @@ nav ul li>a:hover {
     margin: 0.5em 0;
 }
 
-.header p {
-    padding: 0.7em;
-}
 
 /* Main Section */
+
+main section h2 {
+    margin: 2em 0;
+}
 
 .portfolio {
     grid-area: 3 / 1 / span 1 / span 1;
@@ -124,6 +130,7 @@ nav ul li>a:hover {
 .portfolio h3 {
     padding-bottom: 1em;
 }
+
 .project {
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
     background-color: rgba(255, 255, 255, 0.5);
@@ -131,6 +138,7 @@ nav ul li>a:hover {
     transition: 0.3s;
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     margin: 0.5em 0;
     width: 100%;
 }   
@@ -141,13 +149,13 @@ nav ul li>a:hover {
     transition: 0.3s;
 }
 
-
 .project>h3 {
-    padding: 0.75em;
+    padding: 1em;
 }
 
-.portfolio a {
-    padding: 1em;
+.project a>p {
+    min-height: 2.5em;
+    line-height: 1.7;
 }
 
 aside {
@@ -155,7 +163,7 @@ aside {
     font-weight: bold;
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
-    transition: ease;
+    transition: all ease 1s;
     padding: 0.5em;
     display: none;
 }
@@ -170,19 +178,47 @@ aside>a:hover {
 .portfolio a {
     padding: 0;
 }
-#view-code, #hide-code {
-    padding: 1em 0 0.5em 0;
+
+.tray {
+    padding: 0.5em 0;
     opacity: 0.5;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: ease all 700ms;
 }
 
-#hide-code {
-    display: none;
+.tray-close {
+    padding: 0.5em 0;
+    opacity: 0.5;
+    cursor: pointer;
+    font-size: 1.2em;
+    transform: rotate(180deg);
+    transition: ease all 700ms;
 }
+
+@keyframes wiggle {
+    0% { transform: skewX(9deg); } 
+    10% { transform: skewX(-8deg); } 
+    20% { transform: skewX(7deg); } 
+    30% { transform: skewX(-6deg); } 
+    40% { transform: skewX(5deg); } 
+    50% { transform: skewX(-4deg); } 
+    60% { transform: skewX(3deg); } 
+    70% { transform: skewX(-2deg); } 
+    80% { transform: skewX(1deg); } 
+    90% { transform: skewX(0deg); } 
+    100% { transform: skewX(0deg); } 
+ } 
+
 
 /* Contact / Footer */
 
 footer {
     margin: 1em 0;
+}
+
+footer h2 {
+    padding: 1em 0;
 }
 
 footer li {
@@ -192,14 +228,9 @@ footer li {
     font-size: 1.5em;
 }
 
-
 /*media queries*/
 
 @media only screen and (min-width: 460px) {
-    h1 {
-        font-size: 2.2em;
-        padding: 0;
-    }
     
     .portfolio {
         min-width: unset;
