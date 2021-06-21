@@ -34,8 +34,10 @@ body {
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     text-align: center;
-    justify-content: center;
-    align-content: space-between;
+}
+main {
+    display: grid;
+    align-items: space-between;
 }
 
 @keyframes Gradient {
@@ -97,13 +99,13 @@ nav ul li>a:hover {
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
-    height: 50vh;
+    margin-bottom: 1em;
 }
 
 .avatar {
     border-radius: 50%;
     max-height: 6rem;
-    margin: 2em 0;
+    margin: 0.5em 0;
 }
 
 .header p {
@@ -116,15 +118,21 @@ nav ul li>a:hover {
     grid-area: 3 / 1 / span 1 / span 1;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-
+.portfolio h3 {
+    padding-bottom: 1em;
+}
 .project {
     box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px rgba(0, 0, 0, 0.25) solid;
     transition: 0.3s;
+    display: flex;
+    flex-flow: column;
+    margin: 0.5em 0;
+    width: 100%;
 }   
 
 .project:hover {
@@ -133,22 +141,23 @@ nav ul li>a:hover {
     transition: 0.3s;
 }
 
-.project-description>a, .project:hover>a {
-    color: black;
+
+.project>h3 {
+    padding: 0.75em;
 }
 
-.project>h2 {
-    color: white;
-}
-.project-description {
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+.portfolio a {
+    padding: 1em;
 }
 
 aside {
-    background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(0,0,0, 0.3);
     font-weight: bold;
     font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
+    transition: ease;
+    padding: 0.5em;
+    display: none;
 }
 
 aside>a {
@@ -158,12 +167,48 @@ aside>a {
 aside>a:hover {
     color: rgb(224, 142, 142);
 }
+.portfolio a {
+    padding: 0;
+}
+#view-code, #hide-code {
+    padding: 1em 0 0.5em 0;
+    opacity: 0.5;
+}
 
+#hide-code {
+    display: none;
+}
 
 /* Contact / Footer */
+
+footer {
+    margin: 1em 0;
+}
 
 footer li {
     grid-area: 4 / 1 / span 1 / span 1;
     display: inline-block;
-    margin: 0 1em;
+    margin: 0.2em 0.5em;
+    font-size: 1.5em;
+}
+
+
+/*media queries*/
+
+@media only screen and (min-width: 460px) {
+    h1 {
+        font-size: 2.2em;
+        padding: 0;
+    }
+    
+    .portfolio {
+        min-width: unset;
+        flex-flow: row wrap;
+        align-items: stretch;
+    }
+    .project {
+        width: 460px;
+        margin: 0.5em;
+    }
+    
 }
