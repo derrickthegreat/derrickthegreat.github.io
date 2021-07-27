@@ -125,7 +125,6 @@ main section h2 {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 0 1em;
 }
 
 .portfolio h3 {
@@ -141,6 +140,7 @@ main section h2 {
     flex-flow: column;
     justify-content: space-between;
     width: 100%;
+    padding: 0 1.2em;
 }   
 
 .project:hover {
