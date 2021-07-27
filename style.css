@@ -125,6 +125,7 @@ main section h2 {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    padding: 0 1em;
 }
 
 .portfolio h3 {
@@ -162,10 +163,11 @@ main section h2 {
     margin: 0.5em 0;
     font-style: italic;
 }
-.project ul li {
+.project ul>li {
     display: inline-block;
     font-weight: normal;
 }
+
 aside {
     background-color: rgba(0,0,0, 0.3);
     font-weight: bold;
